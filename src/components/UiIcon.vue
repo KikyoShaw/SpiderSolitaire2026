@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const paths = {
+  github: 'M12 .75a11.25 11.25 0 0 0-3.558 21.922c.563.104.769-.244.769-.542 0-.267-.01-1.155-.015-2.096-3.13.68-3.79-1.326-3.79-1.326-.512-1.3-1.25-1.646-1.25-1.646-1.022-.699.078-.685.078-.685 1.13.08 1.725 1.16 1.725 1.16 1.005 1.722 2.637 1.224 3.28.936.102-.727.393-1.224.715-1.505-2.499-.284-5.126-1.25-5.126-5.565 0-1.23.44-2.232 1.16-3.02-.117-.285-.503-1.43.11-2.98 0 0 .945-.302 3.094 1.153A10.8 10.8 0 0 1 12 6.178c.956.004 1.919.13 2.818.379 2.147-1.455 3.09-1.153 3.09-1.153.615 1.55.229 2.695.112 2.98.722.788 1.159 1.79 1.159 3.02 0 4.327-2.631 5.278-5.138 5.557.404.35.763 1.04.763 2.096 0 1.514-.014 2.734-.014 3.105 0 .3.203.65.774.54A11.252 11.252 0 0 0 12 .75Z',
   undo: 'M9 5 4 10l5 5M4 10h10a6 6 0 0 1 0 12',
   hint: 'M9 18h6m-5 3h4M8.1 14.2a7 7 0 1 1 7.8 0c-.8.6-1.4 1.1-1.4 2.3h-5c0-1.2-.6-1.7-1.4-2.3Z',
   pause: 'M8 5v14M16 5v14',
@@ -19,5 +20,6 @@ defineProps<{ name: keyof typeof paths }>()
 
 <template>
   <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65"
-    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path :d="paths[name]" /></svg>
+    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path :d="paths[name]"
+      :fill="name === 'github' ? 'currentColor' : 'none'" :stroke="name === 'github' ? 'none' : 'currentColor'" /></svg>
 </template>

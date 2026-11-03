@@ -121,6 +121,6 @@ src-tauri/
   tauri.conf.json               窗口、内容安全策略与安装包配置
 ```
 
-原生入口保持轻量，游戏规则全部运行在前端，不需要额外 Tauri 插件。扑克牌和操作图标由 CSS、Unicode 和本地 SVG 绘制，不加载外部素材或字体。
+原生入口保持轻量，游戏规则全部运行在前端。右上角的 GitHub 入口在桌面版通过 Tauri 官方 opener 插件打开系统默认浏览器，在浏览器预览中打开新标签页；外部链接权限限定为本项目仓库地址。扑克牌和操作图标由 CSS、Unicode 和本地 SVG 绘制，不加载外部素材或字体。
 
 应用图标已包含在项目中。如需重新生成，可运行 `python scripts/generate_icons.py`，仅使用 Python 标准库；正常开发和打包不需要 Python。

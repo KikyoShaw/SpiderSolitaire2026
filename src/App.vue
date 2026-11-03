@@ -277,6 +277,8 @@ onBeforeUnmount(() => {
         <div><dt>步数</dt><dd>{{ game.moves }}</dd></div>
       </dl>
       <div class="header-actions">
+        <a class="icon-button" href="https://github.com/KikyoShaw/SpiderSolitaire2026" target="_blank" rel="noopener noreferrer"
+          title="GitHub 项目仓库" aria-label="在浏览器中打开 GitHub 项目仓库"><UiIcon name="github" /></a>
         <button class="icon-button" type="button" title="游戏规则" aria-label="游戏规则" @click="dialog = 'rules'"><UiIcon name="help" /></button>
         <button class="icon-button" type="button" title="暂停（P）" aria-label="暂停游戏" :disabled="won" @click="perform(togglePause)"><UiIcon name="pause" /></button>
         <button type="button" class="button button-new" @click="openNewGame"><UiIcon name="plus" />新游戏</button>
